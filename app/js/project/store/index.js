@@ -1,12 +1,5 @@
-let num = 0;
-
 let Model = {
-  getNum() {
-    return num;
-  },
-  updateNum() {
-    num++;
-  }
+  // Do stuff in here
 };
 
 export default Model;
