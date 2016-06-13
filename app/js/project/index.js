@@ -20,16 +20,16 @@ class Intro extends React.Component {
   // The constructor to get state replaces getInitialState
   constructor(props) {
     super(props); // super() passes props to the component
-    this.Previous = this.Previous.bind(this); //Binds this
-    this.Next = this.Next.bind(this);// Binds this
+    this.handlePrevious = this.handlePrevious.bind(this); //Binds this
+    this.handleNext = this.handleNext.bind(this);// Binds this
     this.state = {next: false}; // Sets the default state to false
   }
   // Sets the state to true
-  Next() {
+  handleNext() {
     this.setState({next: true});
   }
   // Sets the state to false
-  Previous() {
+  handlePrevious() {
     this.setState({next: false});
   }
   // renders the content
@@ -41,7 +41,7 @@ class Intro extends React.Component {
         <div className="intro">
           <h1>Welcome to Reactland!</h1>
           <p>You clicked a button. Great job!</p>
-          <button onClick={this.Previous}>cancel</button>
+          <button onClick={this.handlePrevious}>cancel</button>
         </div>
       );
     }
@@ -50,7 +50,7 @@ class Intro extends React.Component {
         <div className="intro">
           <h1>Welcome to Reactland!</h1>
           <p>This area is where you can practice react. Click the button to continue.</p>
-          <button onClick={this.Next}>Get Started</button>
+          <button onClick={this.handleNext}>Get Started</button>
         </div>
       );
     }
