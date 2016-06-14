@@ -3,7 +3,7 @@ import React from 'react';
 class Intro extends React.Component {
   constructor(props) {
     super(props); // super() passes props to the component
-    this.handlePrevious = this.handlePrevious.bind(this);
+    this.handleCancelLogin = this.handleCancelLogin.bind(this);
     this.handleLogin = this.handleLogin.bind(this);
     this.state = {next: false};
   }
@@ -12,7 +12,7 @@ class Intro extends React.Component {
     this.setState({next: true});
   }
 
-  handlePrevious() {
+  handleCancelLogin() {
     this.setState({next: false});
   }
 
@@ -47,7 +47,7 @@ class Intro extends React.Component {
               Continue with Google
             </div>
           </div>
-          <div className="button-cancel" onClick={this.handlePrevious}>Cancel</div>
+          <div className="button-cancel" onClick={this.handleCancelLogin}>Cancel</div>
         </div>
       );
     }
